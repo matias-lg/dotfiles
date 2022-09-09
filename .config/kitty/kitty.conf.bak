@@ -1,0 +1,53 @@
+#FONT
+font_family      Iosevka Term
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+font_size 13
+
+#KEYBINDS
+
+# tabs
+map f1 new_tab_with_cwd
+map shift+f1 close_tab
+map f2 prev_tab
+map f3 next_tab
+
+# move between panes
+enabled_layouts splits
+# Create a new window splitting the space used by the existing one so that
+# the two windows are placed one above the other
+map f5 launch --location=hsplit --cwd=current
+
+# Create a new window splitting the space used by the existing one so that
+# the two windows are placed side by side
+map f6 launch --location=vsplit --cwd=current
+
+# Create a new window splitting the space used by the existing one so that
+# the two windows are placed side by side if the existing window is wide or
+# one above the other if the existing window is tall.
+map f4 launch --location=split --cwd=current
+
+# Rotate the current split, chaging its split axis from vertical to
+# horizontal or vice versa
+map f7 layout_action rotate
+
+# Move the active window in the indicated direction
+map alt+shift+up move_window up
+map alt+shift+left move_window left
+map alt+shift+right move_window right
+map alt+shift+down move_window down
+
+# Switch focus to the neighboring window in the indicated direction
+map ctrl+shift+left neighboring_window left
+map ctrl+shift+right neighboring_window right
+map ctrl+shift+up neighboring_window up
+map ctrl+shift+down neighboring_window down
+
+
+
+
+# BEGIN_KITTY_THEME
+# One Dark
+include current-theme.conf
+# END_KITTY_THEME
