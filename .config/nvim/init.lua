@@ -6,15 +6,13 @@ require("lualine-config")
 require("nvim-tree-config")
 require("comment-nvim-config")
 require("colorizer-config")
-require("sniprun-config")
 require("telescope-config")
 require("bufferline-config")
+require("gitsigns-config")
 --> tree-sitter and tree-sitter plugins
 require("treesitter-config")
 --> lsp modules
 require("lsp-config.cfg")
---> git integration
-require("neogit-setup")
 
 require("notify").setup({
     background_colour = "#000000",
