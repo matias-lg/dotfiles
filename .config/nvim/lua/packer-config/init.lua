@@ -9,12 +9,12 @@ return require("packer").startup(function()
     use("lukas-reineke/indent-blankline.nvim") --> show indent lines
     use("rcarriga/nvim-notify")
     use("kyazdani42/nvim-web-devicons") --> enable icons
-    use("norcalli/nvim-colorizer.lua")
+    use("uga-rosa/ccc.nvim")
 
     -- Telescope
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } --> native fzf plugin
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } --> native fzf plugin
 
     --> treesitter & treesitter modules/plugins
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) --> treesitter
@@ -35,6 +35,10 @@ return require("packer").startup(function()
     use("lewis6991/gitsigns.nvim")
 
     -- colorschemes
+    use("folke/tokyonight.nvim")
+    use("rebelot/kanagawa.nvim")
+    use("MomePP/plastic-nvim")
+    use("ellisonleao/gruvbox.nvim")
     use("navarasu/onedark.nvim")
     use { "catppuccin/nvim", as = "catppuccin" }
 
@@ -47,4 +51,8 @@ return require("packer").startup(function()
     use("hrsh7th/cmp-nvim-lsp") --> LSP source for nvim-cmp
     use("saadparwaiz1/cmp_luasnip") --> Snippets source for nvim-cmp
     use("L3MON4D3/LuaSnip") --> Snippets plugin
+
+    -- markdown
+    use("ellisonleao/glow.nvim")
+    use("preservim/vim-markdown")
 end)

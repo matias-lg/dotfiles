@@ -18,6 +18,8 @@ require("notify").setup({
     background_colour = "#000000",
 })
 --> colorscheme
-require("colors-config.catpuccin")
+require("colors-config.init")
 --> nvim surround
 require("nvim-surround-config")
+--> settings for markdown <--
+require("markdown-config")

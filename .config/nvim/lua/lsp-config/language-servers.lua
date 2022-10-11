@@ -41,6 +41,7 @@ require("lspconfig").sumneko_lua.setup(config({
 }))
 
 require("lspconfig").pyright.setup(config())
+require("lspconfig").marksman.setup(config())
 require("lspconfig").bashls.setup(config())
 require("lspconfig").clangd.setup(config())
 require("lspconfig").gopls.setup(config())

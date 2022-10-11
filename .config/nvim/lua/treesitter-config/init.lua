@@ -9,14 +9,12 @@ require("nvim-treesitter.configs").setup({
 		"javascript",
 		"lua",
 		"typescript",
-		"norg",
-		"norg_meta",
-		"norg_table",
 	},
 	sync_install = false,
 	highlight = {
 		enable = true,
 		additional_vim_regex_highlighting = false,
+        disable = {"markdown"},
 	},
 	indent = {
 		enable = true,
