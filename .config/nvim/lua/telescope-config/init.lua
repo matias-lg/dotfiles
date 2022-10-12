@@ -1,3 +1,18 @@
+local no_preview = function()
+    return require('telescope.themes').get_dropdown({
+        borderchars = {
+            { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+            prompt = { "─", "│", " ", "│", '┌', '┐', "│", "│" },
+            results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+            preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        },
+        width = 0.8,
+        previewer = false,
+        prompt_title = false,
+    })
+end
+
+
 require('telescope').setup {
     defaults = {
         mappings = {
@@ -14,12 +29,13 @@ require('telescope').setup {
             }
         }
     },
-    --[[ pickers = { ]]
-    --[[     find_files = { ]]
-    --[[         theme = "ivy", ]]
-    --[[     }, ]]
-    --[[     live_grep = { ]]
-    --[[         theme = "ivy", ]]
-    --[[     } ]]
-    --[[ }, ]]
 }
+
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+function _G.find_files_no_preview()
+    require "telescope.builtin".find_files(no_preview())
+end
+
+map("n", "<leader>ff", ":lua find_files_no_preview()<CR>", opts)

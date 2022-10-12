@@ -42,15 +42,17 @@ map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)
 
 
 --> telescope mappings <--
-map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
+-- map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 map("n", "<leader>rg", ":Telescope live_grep<cr>", opts)
 map("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 --> buffer mappings <--
 map("n", "<A-c>", ":bd<CR>", opts)
 map("n", "<A-.>", ":BufferLineCycleNext<CR>", opts)
 map("n", "<A-,>", ":BufferLineCyclePrev<CR>", opts)
+
 for i = 1, 9 do
-    map("n", "<leader>" .. i, ":BufferLineGoToBuffer " .. i .. "<CR>", opts)
+    -- map("n", "<leader>" .. i, ":BufferLineGoToBuffer " .. i .. "<CR>", opts)
+    map("n", "<leader>" .. i, ":lua require(\"bufferline\").go_to_buffer(" .. i .. ", true)<CR>", opts)
 end
 
 --> Open LSP diagnostic <--
