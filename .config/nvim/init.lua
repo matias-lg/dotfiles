@@ -9,6 +9,7 @@ require("colorizer-config")
 require("telescope-config")
 require("bufferline-config")
 require("gitsigns-config")
+require("copilot-config")
 --> tree-sitter and tree-sitter plugins
 require("treesitter-config")
 --> lsp modules

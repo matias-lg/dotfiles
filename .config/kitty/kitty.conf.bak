@@ -1,8 +1,8 @@
 #FONT
-font_family      Iosevka
-bold_font        Iosevka
-italic_font      Iosevka
-bold_italic_font Iosevka
+font_family      iosevka
+bold_font        iosevka
+italic_font      iosevka
+bold_italic_font iosevka
 font_size 13
 
 #KEYBINDS
@@ -49,7 +49,7 @@ enable_audio_bell no
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
+# Tokyo Night Storm
 include current-theme.conf
 # END_KITTY_THEME
 
