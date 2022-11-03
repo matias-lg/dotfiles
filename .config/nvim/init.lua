@@ -1,4 +1,5 @@
 require("packer-config")
+require("copilot-config.init")
 require("options")
 require("keymap-config")
 require("autopairs-config")
@@ -9,7 +10,6 @@ require("colorizer-config")
 require("telescope-config")
 require("bufferline-config")
 require("gitsigns-config")
-require("copilot-config")
 --> tree-sitter and tree-sitter plugins
 require("treesitter-config")
 --> lsp modules
