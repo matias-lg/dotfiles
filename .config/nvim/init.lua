@@ -1,6 +1,7 @@
 require("packer-config")
-require("copilot-config.init")
+-- require("copilot-config.init")
 require("options")
+require("diffview-config")
 require("keymap-config")
 require("autopairs-config")
 require("lualine-config")
@@ -16,7 +17,7 @@ require("treesitter-config")
 require("lsp-config.cfg")
 
 require("notify").setup({
-    background_colour = "#000000",
+  background_colour = "#000000",
 })
 --> colorscheme
 require("colors-config.init")

@@ -3,7 +3,7 @@ local cmd = vim.cmd
 -- set.shell = "/bin/sh"
 
 set.expandtab = true
---set.smarttab = true
+set.smarttab = true
 set.shiftwidth = 2
 set.tabstop = 2
 set.softtabstop = 2

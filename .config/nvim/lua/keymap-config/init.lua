@@ -64,8 +64,11 @@ map("n", "<leader>gs", ":lua vim.lsp.buf.signature_help()<CR>", opts)
 map("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", opts)
 map("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts) --> jumps to the definition of the symbol under the cursor
 map("n", "K", ":lua vim.lsp.buf.hover()<CR>", opts) --> information about the symbol under the cursos in a floating window
-map("n", "gi", ":lua vim.lsp.buf.implementation()<CR>", opts) --> lists all the implementations for the symbol under the cursor in the quickfix window
-map("n", "gr", ":lua vim.lsp.buf.references()<CR>", opts) --> lists all the references to the symbl under the cursor in the quickfix window
+map("n", "gi", ":Telescope lsp_implementations<CR>", opts) --> lists all the implementations for the symbol under the cursor in the quickfix window
+map("n", "gr", ":Telescope lsp_references<CR>", opts) --> lists all the references to the symbl under the cursor in the quickfix window
 map("n", "<leader>dd", ":lua vim.diagnostic.open_float()<CR>", opts)
 map("n", "<leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
 map("n", "<leader>ft", ":lua vim.lsp.buf.format {async = true}<CR>", opts) --> formats the current buffer
+map("n", "<leader>dj", ":lua vim.diagnostic.goto_next()<CR>", opts)
+map("n", "<leader>dk", ":lua vim.diagnostic.goto_prev()<CR>", opts)
+map("n", "<leader>dl", ":Telescope diagnostics<CR>", opts)
