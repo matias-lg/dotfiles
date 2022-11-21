@@ -35,5 +35,3 @@ set.clipboard = "unnamedplus"
 
 vim.o.pumheight = 7
 set.list = false
-
-vim.notify = require("notify")

@@ -1,8 +1,8 @@
 require("packer-config")
--- require("copilot-config.init")
+require("copilot-config")
 require("options")
 require("diffview-config")
-require("keymap-config")
+require("keymaps")
 require("autopairs-config")
 require("lualine-config")
 require("nvim-tree-config")
@@ -15,12 +15,11 @@ require("gitsigns-config")
 require("treesitter-config")
 --> lsp modules
 require("lsp-config.cfg")
-
 require("notify").setup({
   background_colour = "#000000",
 })
 --> colorscheme
-require("colors-config.init")
+require("colorscheme")
 --> nvim surround
 require("nvim-surround-config")
 --> settings for markdown <--

@@ -1,4 +1,4 @@
-return require("packer").startup(function()
+return require("packer").startup(function(use)
   -- packer
   use("wbthomason/packer.nvim")
 
@@ -11,6 +11,10 @@ return require("packer").startup(function()
   use("kyazdani42/nvim-web-devicons") --> enable icons
   use("uga-rosa/ccc.nvim")
   use("romainl/vim-cool") --> better search highlighting
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
 
   -- Telescope
   use("nvim-lua/plenary.nvim")
@@ -35,17 +39,19 @@ return require("packer").startup(function()
   use("rhysd/git-messenger.vim")
   use("lewis6991/gitsigns.nvim")
   use("sindrets/diffview.nvim")
-  
+
   -- colorschemes
   use("B4mbus/oxocarbon-lua.nvim")
   use("catppuccin/nvim")
   use("eddyekofo94/gruvbox-flat.nvim")
   use("folke/tokyonight.nvim")
-
   -- lsp, completion
   use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
   use("williamboman/nvim-lsp-installer") --> Companion plugin for lsp-config, allows us to seamlesly install language servers
   use("jose-elias-alvarez/null-ls.nvim") --> inject lsp diagnistocs, formattings, code actions, and more ...
+
   use("onsails/lspkind-nvim") --> vscode-like pictograms for neovim lsp completion items
   use("hrsh7th/nvim-cmp") --> Autocompletion plugin
   use("hrsh7th/cmp-nvim-lsp") --> LSP source for nvim-cmp

@@ -1,4 +1,4 @@
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local cmd = vim.cmd
 local opts = { noremap = true, silent = true }
 
@@ -51,8 +51,8 @@ map("n", "<A-.>", ":BufferLineCycleNext<CR>", opts)
 map("n", "<A-,>", ":BufferLineCyclePrev<CR>", opts)
 
 for i = 1, 9 do
-    -- map("n", "<leader>" .. i, ":BufferLineGoToBuffer " .. i .. "<CR>", opts)
-    map("n", "<leader>" .. i, ":lua require(\"bufferline\").go_to_buffer(" .. i .. ", true)<CR>", opts)
+  -- map("n", "<leader>" .. i, ":BufferLineGoToBuffer " .. i .. "<CR>", opts)
+  map("n", "<leader>" .. i, ":lua require(\"bufferline\").go_to_buffer(" .. i .. ", true)<CR>", opts)
 end
 
 --> Open LSP diagnostic <--
@@ -65,10 +65,17 @@ map("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", opts)
 map("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts) --> jumps to the definition of the symbol under the cursor
 map("n", "K", ":lua vim.lsp.buf.hover()<CR>", opts) --> information about the symbol under the cursos in a floating window
 map("n", "gi", ":Telescope lsp_implementations<CR>", opts) --> lists all the implementations for the symbol under the cursor in the quickfix window
-map("n", "gr", ":Telescope lsp_references<CR>", opts) --> lists all the references to the symbl under the cursor in the quickfix window
+-- map("n", "gr", ":Telescope lsp_references<CR>", opts) --> lists all the references to the symbl under the cursor in the quickfix window
 map("n", "<leader>dd", ":lua vim.diagnostic.open_float()<CR>", opts)
 map("n", "<leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
 map("n", "<leader>ft", ":lua vim.lsp.buf.format {async = true}<CR>", opts) --> formats the current buffer
 map("n", "<leader>dj", ":lua vim.diagnostic.goto_next()<CR>", opts)
 map("n", "<leader>dk", ":lua vim.diagnostic.goto_prev()<CR>", opts)
 map("n", "<leader>dl", ":Telescope diagnostics<CR>", opts)
+
+map("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
+map("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+map("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+map("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
+map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
+map("n", "gr", "<cmd>TroubleToggle lsp_references<cr>", opts)
