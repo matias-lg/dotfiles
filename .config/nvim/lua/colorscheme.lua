@@ -1,3 +1,2 @@
--- setup must be called before loading
-
-vim.cmd("colorscheme gruvbox-flat")
+vim.cmd[[let g:gruvbox_material_diagnostic_virtual_text = 'colored']]
+vim.cmd[[colorscheme gruvbox-material]]

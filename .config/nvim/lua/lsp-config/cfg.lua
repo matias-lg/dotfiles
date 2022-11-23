@@ -19,20 +19,20 @@ vim.diagnostic.config({
 
 vim.fn.sign_define(
   'DiagnosticSignError',
-  { text = '', texthl = 'LspDiagnosticsDefaultError' }
+  { text = '', texthl = 'VirtualTextError' }
 )
 
 vim.fn.sign_define(
   'DiagnosticSignWarn',
-  { text = '', texthl = 'LspDiagnosticsDefaultWarning' }
+  { text = '', texthl = 'VirtualTextWarning' }
 )
 
 vim.fn.sign_define(
   'DiagnosticSignInfo',
-  { text = '', texthl = 'LspDiagnosticsDefaultInformation' }
+  { text = '', texthl = 'VirtualTextInfo' }
 )
 
 vim.fn.sign_define(
   'DiagnosticSignHint',
-  { text = '', texthl = 'LspDiagnosticsDefaultHint' }
+  { text = '', texthl = 'VirtualTextHint' }
 )

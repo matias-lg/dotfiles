@@ -41,7 +41,7 @@ return require("packer").startup(function(use)
   use("sindrets/diffview.nvim")
 
   -- colorschemes
-  use("B4mbus/oxocarbon-lua.nvim")
+  use("sainnhe/gruvbox-material")
   use("catppuccin/nvim")
   use("eddyekofo94/gruvbox-flat.nvim")
   use("folke/tokyonight.nvim")
