@@ -37,7 +37,7 @@ cmd 'tnoremap <C-l> <C-\\><C-n><C-W>l'
 -- cmd 'noremap <S-;> ;'
 
 --> nvim tree mappings <--
-map("n", "<C-f>", ":NvimTreeToggle<CR>", opts)
+map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)
 
 
