@@ -1,5 +1,6 @@
 require('impatient')
 
+require('illuminate-config')
 require("packer-config")
 require("copilot-config")
 require("options")

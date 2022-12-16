@@ -6,6 +6,7 @@ return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
 
   -- nvim UI/utils
+  use("RRethy/vim-illuminate")
   use("nvim-lualine/lualine.nvim") --> a statusline written in lua
   use("akinsho/bufferline.nvim") --> visible buffer tabs
   use("kyazdani42/nvim-tree.lua") --> file explorer
@@ -45,8 +46,6 @@ return require("packer").startup(function(use)
 
   -- colorschemes
   use("sainnhe/gruvbox-material")
-  use("catppuccin/nvim")
-  use("eddyekofo94/gruvbox-flat.nvim")
   use("folke/tokyonight.nvim")
   -- lsp, completion
   use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
