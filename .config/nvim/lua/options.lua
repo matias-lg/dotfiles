@@ -1,37 +1,45 @@
-local set = vim.opt
+local opt = vim.opt
 local cmd = vim.cmd
 -- set.shell = "/bin/sh"
 
-set.expandtab = true
-set.smarttab = true
-set.shiftwidth = 2
-set.tabstop = 2
-set.softtabstop = 2
-set.relativenumber = true
+opt.relativenumber = true
+opt.number = true
 
-set.hlsearch = true
-set.incsearch = true
-set.ignorecase = true
-set.smartcase = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
 
-set.laststatus=3
-set.termguicolors = true
-set.showmode = false
-set.splitbelow = true
-set.splitright = true
-set.wrap = false
-set.breakindent = true
-set.scrolloff = 5
-set.fileencoding = "utf-8"
+opt.smartindent = true
 
-set.number = true
-set.cursorline = true
-set.wildmenu = true
-set.completeopt = "menuone,noselect"
+opt.wrap = false
 
-set.hidden = true
-set.mouse = "a"
-set.clipboard = "unnamedplus"
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
+
+opt.hlsearch = true
+opt.incsearch = true
+
+opt.ignorecase = true
+opt.smartcase = true
+
+opt.termguicolors = true
+
+opt.laststatus = 3
+
+opt.splitbelow = true
+opt.splitright = true
+
+opt.signcolumn = "yes"
+opt.scrolloff = 5
+opt.fileencoding = "utf-8"
+
+opt.cursorline = true
+opt.completeopt = "menuone,noselect"
+
+opt.mouse = "a"
+opt.clipboard = "unnamedplus"
 
 vim.o.pumheight = 7
-set.list = false
