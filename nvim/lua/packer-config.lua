@@ -8,6 +8,7 @@ return require("packer").startup(function(use)
     -- nvim UI/utils
     use("RRethy/vim-illuminate")
     use("nvim-lualine/lualine.nvim") --> a statusline written in lua
+    use("famiu/bufdelete.nvim")
     use("akinsho/bufferline.nvim") --> visible buffer tabs
     use("kyazdani42/nvim-tree.lua") --> file explorer
     use("lukas-reineke/indent-blankline.nvim") --> show indent lines
@@ -28,8 +29,6 @@ return require("packer").startup(function(use)
     --> treesitter & treesitter modules/plugins
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) --> treesitter
     use("nvim-treesitter/nvim-treesitter-textobjects") --> textobjects
-    use("nvim-treesitter/nvim-treesitter-refactor")
-    use("p00f/nvim-ts-rainbow")
     use("nvim-treesitter/playground")
     use("JoosepAlviste/nvim-ts-context-commentstring")
 
@@ -40,11 +39,11 @@ return require("packer").startup(function(use)
 
     -- Git
     use("tpope/vim-fugitive")
-    use("rhysd/git-messenger.vim")
     use("lewis6991/gitsigns.nvim")
     use("sindrets/diffview.nvim")
 
     -- colorschemes
+    use("catppuccin/nvim")
     use("sainnhe/gruvbox-material")
     use("folke/tokyonight.nvim")
     -- lsp, completion
@@ -62,7 +61,6 @@ return require("packer").startup(function(use)
     use("L3MON4D3/LuaSnip") --> Snippets plugin
 
     -- markdown
-    use("ellisonleao/glow.nvim")
     use("preservim/vim-markdown")
 
     use("zbirenbaum/copilot.lua") --> GitHub Copilot

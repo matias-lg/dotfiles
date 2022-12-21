@@ -21,7 +21,7 @@ if [ ! -d $NVIM_DIR ]; then
 fi
 
 cd $NVIM_DIR 
-cp -rsf "$DOTFILES_DIR/.config/nvim/" ..
+cp -rsf "$DOTFILES_DIR/nvim/" ..
 # create symlinks for Kitty
 echo "Creating symlink for kitty"
 KITTY_DIR="$HOME/.config/kitty"
@@ -31,4 +31,4 @@ if [ ! -d $KITTY_DIR ]; then
 fi
 
 cd $KITTY_DIR 
-cp -rsf "$DOTFILES_DIR/.config/kitty/" ..
+cp -rsf "$DOTFILES_DIR/kitty/" ..

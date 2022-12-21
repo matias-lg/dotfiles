@@ -12,7 +12,7 @@ require("nvim-tree-config")
 require("comment-nvim-config")
 require("colorizer-config")
 require("telescope-config")
--- require("bufferline-config")
+require("bufferline-config")
 require("gitsigns-config")
 --> tree-sitter and tree-sitter plugins
 require("treesitter-config")

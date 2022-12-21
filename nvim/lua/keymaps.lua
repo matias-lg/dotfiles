@@ -46,7 +46,7 @@ map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)
 map("n", "<leader>rg", ":Telescope live_grep<cr>", opts)
 map("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 --> buffer mappings <--
-map("n", "<A-c>", ":bd<CR>", opts)
+map("n", "<A-c>", ":Bdelete!<CR>", opts)
 map("n", "<A-.>", ":BufferLineCycleNext<CR>", opts)
 map("n", "<A-,>", ":BufferLineCyclePrev<CR>", opts)
 

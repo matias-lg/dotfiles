@@ -1,7 +1,7 @@
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = "auto",
+    theme = "gruvbox-material",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {},
@@ -49,19 +49,6 @@ require('lualine').setup({
     lualine_b = {},
     lualine_c = { "filename" },
     lualine_x = { "location" },
-    lualine_y = {},
-    lualine_z = {},
-  },
-  tabline = {
-    lualine_c = {
-      {
-        "filename",
-        path = 1,
-      },
-    },
-    lualine_b = {},
-    lualine_a = {},
-    lualine_x = {},
     lualine_y = {},
     lualine_z = {},
   },
