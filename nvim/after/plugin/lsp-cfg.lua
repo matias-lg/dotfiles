@@ -2,7 +2,6 @@ require("lsp-config.language-servers")
 require("lsp-config.completion")
 require("lsp-config.null-ls")
 
-
 vim.diagnostic.config({
     virtual_text = {
         severity = {
