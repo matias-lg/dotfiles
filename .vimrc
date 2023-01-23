@@ -1,3 +1,5 @@
+autocmd vimenter * ++nested colorscheme gruvbox
+
 set nu
 set rnu
 syntax on
