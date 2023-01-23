@@ -60,3 +60,10 @@ if vim.fn.has("wsl") == 1 then
 end
 
 vim.o.pumheight = 7
+
+-- Highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})

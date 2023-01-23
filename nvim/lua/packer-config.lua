@@ -64,4 +64,10 @@ return require("packer").startup(function(use)
     use("preservim/vim-markdown")
 
     use("zbirenbaum/copilot.lua") --> GitHub Copilot
+    use {
+        'goolord/alpha-nvim',
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+        end
+    }
 end)
