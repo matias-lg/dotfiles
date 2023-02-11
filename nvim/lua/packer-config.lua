@@ -40,12 +40,11 @@ return require("packer").startup(function(use)
     -- Git
     use("tpope/vim-fugitive")
     use("lewis6991/gitsigns.nvim")
-    use("sindrets/diffview.nvim")
+    -- use("sindrets/diffview.nvim")
 
     -- colorschemes
-    use("catppuccin/nvim")
+    use('rose-pine/neovim')
     use("sainnhe/gruvbox-material")
-    use("folke/tokyonight.nvim")
     -- lsp, completion
     use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
     use("williamboman/mason.nvim")

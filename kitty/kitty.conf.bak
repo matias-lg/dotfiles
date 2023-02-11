@@ -57,9 +57,11 @@ map ctrl+shift+down neighboring_window down
 # no bell sound
 enable_audio_bell no
 
+# title bar
+
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Gruvbox Material Dark Hard
 include current-theme.conf
 # END_KITTY_THEME
 

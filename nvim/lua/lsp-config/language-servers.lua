@@ -12,7 +12,7 @@ require("mason-lspconfig").setup {
         "marksman",
         "bashls",
         "clangd",
-        "gopls",
+        -- "gopls",
         "intelephense",
     },
 }
@@ -58,6 +58,6 @@ require("lspconfig").pyright.setup(config())
 require("lspconfig").marksman.setup(config())
 require("lspconfig").bashls.setup(config())
 require("lspconfig").clangd.setup(config())
-require("lspconfig").gopls.setup(config())
+-- require("lspconfig").gopls.setup(config())
 require("lspconfig").intelephense.setup(config())
 require("lspconfig").rust_analyzer.setup(config())

@@ -1,4 +1,9 @@
-vim.cmd[[let g:gruvbox_material_diagnostic_virtual_text = 'colored']]
-vim.cmd[[colorscheme gruvbox-material]]
+vim.cmd [[let g:gruvbox_material_diagnostic_virtual_text = 'colored']]
+vim.cmd [[colorscheme gruvbox-material]]
 
--- vim.cmd.colorscheme "catppuccin"
+require("rose-pine").setup(
+    { dark_variant = 'moon',
+        disable_italics = true
+    }
+)
+vim.cmd('colorscheme rose-pine')

@@ -1,5 +1,5 @@
-local map = vim.keymap.set
 local cmd = vim.cmd
+local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " " -- leader key
@@ -39,9 +39,9 @@ map("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
 map("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
 
 -- highlights under cursor
-if vim.fn.has("nvim-0.9.0") == 1 then
-  map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
-end
+-- if vim.fn.has("nvim-0.9.0") == 1 then
+--   map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
+-- end
 
 map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
