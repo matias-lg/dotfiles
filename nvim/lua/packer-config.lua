@@ -25,6 +25,7 @@ return require("packer").startup(function(use)
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } --> native fzf plugin
+    use('nvim-telescope/telescope-file-browser.nvim')
 
     --> treesitter & treesitter modules/plugins
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) --> treesitter
@@ -43,6 +44,8 @@ return require("packer").startup(function(use)
     -- use("sindrets/diffview.nvim")
 
     -- colorschemes
+    use('ellisonleao/gruvbox.nvim')
+    use("arturgoms/moonbow.nvim")
     use('rose-pine/neovim')
     use("sainnhe/gruvbox-material")
     -- lsp, completion

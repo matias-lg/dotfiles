@@ -6,7 +6,7 @@ require("mason").setup {
     }
 }
 require("mason-lspconfig").setup {
-    ensure_installed = { "sumneko_lua",
+    ensure_installed = { "lua_ls",
         "rust_analyzer",
         "pyright",
         "marksman",
@@ -30,7 +30,7 @@ require("lspconfig").tsserver.setup {
     end,
 }
 
-require("lspconfig").sumneko_lua.setup(config({
+require("lspconfig").lua_ls.setup(config({
     settings = {
         Lua = {
             runtime = {
