@@ -12,7 +12,6 @@ return require("packer").startup(function(use)
     use("akinsho/bufferline.nvim") --> visible buffer tabs
     use("kyazdani42/nvim-tree.lua") --> file explorer
     use("lukas-reineke/indent-blankline.nvim") --> show indent lines
-    use("rcarriga/nvim-notify")
     use("kyazdani42/nvim-web-devicons") --> enable icons
     use("uga-rosa/ccc.nvim")
     use("romainl/vim-cool") --> better search highlighting
@@ -20,7 +19,7 @@ return require("packer").startup(function(use)
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
     }
-
+    use("rcarriga/nvim-notify")
     -- Telescope
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
@@ -44,10 +43,12 @@ return require("packer").startup(function(use)
     -- use("sindrets/diffview.nvim")
 
     -- colorschemes
+    use("tjdevries/colorbuddy.nvim")
     use('ellisonleao/gruvbox.nvim')
-    use("arturgoms/moonbow.nvim")
     use('rose-pine/neovim')
     use("sainnhe/gruvbox-material")
+    use("svrana/neosolarized.nvim")
+
     -- lsp, completion
     use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
     use("williamboman/mason.nvim")
@@ -72,4 +73,7 @@ return require("packer").startup(function(use)
             require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
         end
     }
+
+    -- LaTeX
+    use { "lervag/vimtex" }
 end)

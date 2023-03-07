@@ -6,7 +6,9 @@ require("mason").setup {
     }
 }
 require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls",
+    ensure_installed = {
+        "lua_ls",
+        "texlab",
         "rust_analyzer",
         "pyright",
         "marksman",
@@ -54,6 +56,7 @@ require("lspconfig").lua_ls.setup(config({
     },
 }))
 
+require("lspconfig").texlab.setup(config())
 require("lspconfig").pyright.setup(config())
 require("lspconfig").marksman.setup(config())
 require("lspconfig").bashls.setup(config())
