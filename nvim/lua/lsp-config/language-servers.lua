@@ -56,11 +56,15 @@ require("lspconfig").lua_ls.setup(config({
     },
 }))
 
+local clangd_capabilities = vim.lsp.protocol.make_client_capabilities()
+ clangd_capabilities.offsetEncoding = 'utf-8'
+ require('lspconfig').clangd.setup{
+        capabilities = clangd_capabilities
+}
 require("lspconfig").texlab.setup(config())
 require("lspconfig").pyright.setup(config())
 require("lspconfig").marksman.setup(config())
 require("lspconfig").bashls.setup(config())
-require("lspconfig").clangd.setup(config())
 -- require("lspconfig").gopls.setup(config())
 require("lspconfig").intelephense.setup(config())
 require("lspconfig").rust_analyzer.setup(config())

@@ -1,3 +1,16 @@
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
 return require("packer").startup(function(use)
     -- startup time, perf
     use("lewis6991/impatient.nvim")
@@ -43,11 +56,9 @@ return require("packer").startup(function(use)
     -- use("sindrets/diffview.nvim")
 
     -- colorschemes
-    use("tjdevries/colorbuddy.nvim")
     use('ellisonleao/gruvbox.nvim')
     use('rose-pine/neovim')
     use("sainnhe/gruvbox-material")
-    use("svrana/neosolarized.nvim")
 
     -- lsp, completion
     use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
@@ -76,4 +87,8 @@ return require("packer").startup(function(use)
 
     -- LaTeX
     use { "lervag/vimtex" }
+
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
