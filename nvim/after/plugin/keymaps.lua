@@ -89,3 +89,5 @@ map("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 map("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
 map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
 map("n", "gr", "<cmd>TroubleToggle lsp_references<cr>", opts)
+
+map("n", "<leader>cr", ":new | r !g++ -Wall -Wextra -Wshadow -fsanitize=undefined -DLOCAL -O -std=c++17 # -o #:r && ./#:r <CR>")
