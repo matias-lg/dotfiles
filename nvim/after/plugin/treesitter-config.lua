@@ -20,7 +20,6 @@ require("nvim-treesitter.configs").setup({
         "help",
         "lua",
     },
-    indent = { enable = true },
     context_commentstring = { enable = true, enable_autocmd = false },
     highlight = {
         enable = true,
