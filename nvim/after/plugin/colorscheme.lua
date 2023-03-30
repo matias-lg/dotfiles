@@ -1,5 +1,4 @@
-vim.cmd [[let g:gruvbox_material_diagnostic_virtual_text = 'colored']]
-vim.cmd [[colorscheme gruvbox-material]]
+-- vim.cmd [[let g:gruvbox_material_diagnostic_virtual_text = 'colored']]
 
 require("rose-pine").setup(
     { --dark_variant = 'moon',
@@ -7,5 +6,4 @@ require("rose-pine").setup(
     }
 )
 
--- vim.cmd('colorscheme rose-pine')
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme onenord')

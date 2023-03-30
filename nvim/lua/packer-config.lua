@@ -58,7 +58,8 @@ return require("packer").startup(function(use)
     -- colorschemes
     use('ellisonleao/gruvbox.nvim')
     use('rose-pine/neovim')
-    use("sainnhe/gruvbox-material")
+    use('rmehri01/onenord.nvim')
+    use('shaunsingh/nord.nvim')
 
     -- lsp, completion
     use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
