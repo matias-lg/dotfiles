@@ -53,15 +53,13 @@ return require("packer").startup(function(use)
     -- Git
     use("tpope/vim-fugitive")
     use("lewis6991/gitsigns.nvim")
-    -- use("sindrets/diffview.nvim")
 
     -- colorschemes
     use('ellisonleao/gruvbox.nvim')
     use('rose-pine/neovim')
-    use('rmehri01/onenord.nvim')
-    use('shaunsingh/nord.nvim')
 
     -- lsp, completion
+    use("/ray-x/lsp_signature.nvim")
     use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")

@@ -68,3 +68,6 @@ require("lspconfig").bashls.setup(config())
 -- require("lspconfig").gopls.setup(config())
 require("lspconfig").intelephense.setup(config())
 require("lspconfig").rust_analyzer.setup(config())
+
+
+require "lsp_signature".setup()
