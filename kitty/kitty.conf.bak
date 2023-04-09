@@ -1,8 +1,8 @@
 #FONT
-font_family      iosevka
-bold_font        iosevka
-italic_font      iosevka
-bold_italic_font iosevka
+font_family      monospace
+bold_font        monospace
+italic_font      monospace
+bold_italic_font monospace
 font_size 12
 
 #KEYBINDS
@@ -61,7 +61,7 @@ enable_audio_bell no
 
 
 # BEGIN_KITTY_THEME
-# Square
+# Solarized Dark
 include current-theme.conf
 # END_KITTY_THEME
 
