@@ -65,6 +65,10 @@ for i = 1, 9 do
     map("n", "<leader>" .. i, ":lua require(\"bufferline\").go_to_buffer(" .. i .. ", true)<CR>", opts)
 end
 
+--> Search and replace word under cursor <--
+map("n", "<leader>sr", ":s/<C-r><C-w>/", {desc = "Search and replace word under cursor (Current line)"})
+map("n", "<leader>sg", ":%s/<C-r><C-w>/", {desc = "Search and replace word under cursor (Current buffer)"})
+
 --> Open LSP diagnostic <--
 map("n", "<leader>sd", ":lua vim.diagnostic.open_float()<CR>", opts)
 --> Regular Lsp bindings <--
