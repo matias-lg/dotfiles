@@ -47,7 +47,6 @@ map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 --> nvim tree mappings <--
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-map("n", "<leader>fe", ":NvimTreeFindFileToggle<CR>", opts)
 map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)
 
 

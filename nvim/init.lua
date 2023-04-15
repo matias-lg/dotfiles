@@ -16,11 +16,6 @@ opt.smartindent = true
 
 opt.wrap = false
 
--- set word wrap at 80 characters for markdown and tex files
-vim.cmd([[
-  au FileType markdown, tex setlocal wrap
-]])
-
 opt.swapfile = false
 opt.backup = false
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"

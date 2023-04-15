@@ -57,6 +57,7 @@ return require("packer").startup(function(use)
     -- colorschemes
     use('ellisonleao/gruvbox.nvim')
     use('rose-pine/neovim')
+    use('ishan9299/nvim-solarized-lua')
 
     -- lsp, completion
     use("/ray-x/lsp_signature.nvim")

@@ -12,7 +12,7 @@ require("rose-pine").setup(
         disable_italics = true
     }
 )
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme solarized')
 
 
 local close_func = function(bufnum)
