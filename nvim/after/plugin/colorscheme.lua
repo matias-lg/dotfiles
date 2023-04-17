@@ -1,11 +1,3 @@
-require("rose-pine").setup(
-    { --dark_variant = 'moon',
-        disable_italics = true
-    }
-)
-
-vim.cmd('colorscheme gruvbox')
-
 -- yoinked from astroNvim
 require("rose-pine").setup(
     { --dark_variant = 'moon',
@@ -15,6 +7,7 @@ require("rose-pine").setup(
 vim.cmd('colorscheme solarized')
 
 
+-- begin bufferline
 local close_func = function(bufnum)
     local bufdelete_avail, bufdelete = pcall(require, "bufdelete")
     if bufdelete_avail then
