@@ -22,7 +22,7 @@ dir_create_symlink() {
 }
 
 # symlinks for zsh and bash
-DOTFILES=(.zshrc .bashrc)
+DOTFILES=(.zshrc .bashrc .tmux.conf)
 for file in "${DOTFILES[@]}"; do
 if [ ! $HOME/$file ]; then
   echo "Creating symlink for $file"
@@ -35,5 +35,5 @@ done
 
 DOTFILE_DIRS=("nvim" "kitty")
 for dir in "${DOTFILE_DIRS[@]}"; do
-  dir_create_symlink "$dir" "$HOME/.config/$dir"
+  dir_create_symlink "$dir" "$HOME/.config/"
 done

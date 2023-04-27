@@ -87,7 +87,7 @@ return require("packer").startup(function(use)
 
     -- LaTeX
     use { "lervag/vimtex" }
-
+    use {"christoomey/vim-tmux-navigator"}
   if packer_bootstrap then
     require('packer').sync()
   end
