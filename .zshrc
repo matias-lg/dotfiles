@@ -153,5 +153,6 @@ export ANDROID_HOME=/home/matias/Android/Sdk
 alias difft="~/programs/difftastic/difft"
 
 source ~/.secrets
+echo  "export TERM=xterm-256color" >> ~/.zshrc
 
 eval $(ssh-agent) > /dev/null
