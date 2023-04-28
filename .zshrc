@@ -82,6 +82,7 @@ plugins=(
     docker-compose
 	git
 	zsh-autosuggestions
+    zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -146,13 +147,13 @@ export GOPATH=$HOME/go/
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 
-# ANDROID STUDIO
-export PATH=$PATH:/home/matias/programs/androidstudio/android-studio/bin
-export ANDROID_HOME=/home/matias/Android/Sdk
-
 alias difft="~/programs/difftastic/difft"
 
 source ~/.secrets
-echo  "export TERM=xterm-256color" >> ~/.zshrc
 
 eval $(ssh-agent) > /dev/null
+export TERM=xterm-256color
+# Run tmux if it exists, and we're not already in a tmux session
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    exec tmux
+fi
