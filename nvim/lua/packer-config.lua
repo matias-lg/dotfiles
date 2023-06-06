@@ -9,7 +9,7 @@ local ensure_packer = function()
   return false
 end
 
-local packer_bootstrap = ensure_packer()
+local  packer_bootstrap  = ensure_packer()
 
 return require("packer").startup(function(use)
     -- startup time, perf
@@ -55,6 +55,7 @@ return require("packer").startup(function(use)
     use("lewis6991/gitsigns.nvim")
 
     -- colorschemes
+    use("kvrohit/rasmus.nvim")
     use('ellisonleao/gruvbox.nvim')
     use('rose-pine/neovim')
     use('ishan9299/nvim-solarized-lua')
@@ -76,6 +77,9 @@ return require("packer").startup(function(use)
 
     -- markdown
     use("preservim/vim-markdown")
+
+    -- python venv
+    use("AckslD/swenv.nvim")
 
     use("zbirenbaum/copilot.lua") --> GitHub Copilot
     use {
