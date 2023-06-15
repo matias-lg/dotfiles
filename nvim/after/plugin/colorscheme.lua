@@ -4,7 +4,7 @@ require("rose-pine").setup(
         disable_italics = true
     }
 )
-vim.cmd('colorscheme solarized')
+vim.cmd('colorscheme gruvbox')
 
 
 -- begin bufferline

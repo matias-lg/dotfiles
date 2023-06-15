@@ -19,6 +19,7 @@ return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
 
     -- nvim UI/utils
+    use("folke/zen-mode.nvim")
     use("RRethy/vim-illuminate")
     use("nvim-lualine/lualine.nvim") --> a statusline written in lua
     use("famiu/bufdelete.nvim")
@@ -55,13 +56,12 @@ return require("packer").startup(function(use)
     use("lewis6991/gitsigns.nvim")
 
     -- colorschemes
-    use("kvrohit/rasmus.nvim")
     use('ellisonleao/gruvbox.nvim')
     use('rose-pine/neovim')
     use('ishan9299/nvim-solarized-lua')
 
     -- lsp, completion
-    use("/ray-x/lsp_signature.nvim")
+    use("ray-x/lsp_signature.nvim")
     use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
