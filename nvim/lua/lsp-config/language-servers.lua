@@ -9,23 +9,22 @@ require("mason-lspconfig").setup {
     ensure_installed = {
         "lua_ls",
         "texlab",
-        "rust_analyzer",
+        "tailwindcss",
         "pyright",
         "marksman",
         "bashls",
         "clangd",
-        -- "gopls",
-        "intelephense",
     },
 }
 
 local function config(_config)
     return vim.tbl_deep_extend("force", {
-        capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+        default_capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     }, _config or {})
 end
 
 require("lspconfig").tsserver.setup {
+    capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     on_attach = function(client)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
@@ -65,9 +64,7 @@ require("lspconfig").texlab.setup(config())
 require("lspconfig").pyright.setup(config())
 require("lspconfig").marksman.setup(config())
 require("lspconfig").bashls.setup(config())
--- require("lspconfig").gopls.setup(config())
-require("lspconfig").intelephense.setup(config())
-require("lspconfig").rust_analyzer.setup(config())
+require("lspconfig").tailwindcss.setup(config())
 
 
 require "lsp_signature".setup()

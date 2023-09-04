@@ -6,3 +6,7 @@ vim.cmd[[setlocal wrap]]
 -- vim.cmd[[setlocal colorcolumn=80]]
 locmap(0, "n", "<leader>fe", ":VimtexTocToggle<CR>", opts)
 locmap(0, "n", "<leader>vc", ":VimtexCompile<CR>", opts)
+
+-- enable spell checking for spanish and english
+vim.cmd[[setlocal spell spelllang=en_us,es]]
+

@@ -3,9 +3,6 @@ local cmp = require("cmp")
 local lspkind = require("lspkind")
 
 cmp.setup({
-    completion = {
-        autocomplete = false,
-    },
     formatting = {
         format = lspkind.cmp_format({
             with_text = true, -- do not show text alongside icons
