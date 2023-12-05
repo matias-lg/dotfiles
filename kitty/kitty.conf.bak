@@ -2,11 +2,11 @@ startup_session /home/mati/.config/kitty/kitty-startup.session
 
 
 #FONT
-font_family      FiraCode Nerd Font
-bold_font        FiraCode Nerd Font
-italic_font      FiraCode Nerd Font
-bold_italic_font FiraCode Nerd Font
-font_size 11
+font_family      comic code regular
+bold_font        comic code bold
+italic_font      comic code italic
+bold_italic_font comic code bold italic
+font_size 12
 
 # no bell sound
 enable_audio_bell no
@@ -15,7 +15,7 @@ enable_audio_bell no
 
 
 # BEGIN_KITTY_THEME
-# GitHub Dark Dimmed
+# Solarized Dark
 include current-theme.conf
 # END_KITTY_THEME
 

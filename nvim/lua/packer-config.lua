@@ -59,6 +59,7 @@ return require("packer").startup(function(use)
     use('ellisonleao/gruvbox.nvim')
     use('rose-pine/neovim')
     use('ishan9299/nvim-solarized-lua')
+    use('projekt0n/caret.nvim')
 
     -- lsp, completion
     use("ray-x/lsp_signature.nvim")

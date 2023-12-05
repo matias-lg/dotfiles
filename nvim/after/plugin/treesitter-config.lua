@@ -20,7 +20,7 @@ require("nvim-treesitter.configs").setup({
         "help",
         "lua",
     },
-    context_commentstring = { enable = true, enable_autocmd = false },
+    
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
@@ -52,3 +52,6 @@ require("nvim-treesitter.configs").setup({
         },
     },
 })
+
+require('ts_context_commentstring').setup {}
+vim.g.skip_ts_context_commentstring_module = true
