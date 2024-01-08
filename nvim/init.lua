@@ -1,6 +1,3 @@
-require('impatient')
-require("packer-config")
-
 local opt = vim.opt
 local cmd = vim.cmd
 
@@ -67,3 +64,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank()
   end,
 })
+
+require("core_init")
