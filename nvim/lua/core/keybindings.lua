@@ -29,7 +29,6 @@ end
 
 -- Bufferline
 for i = 1, 9 do
-  -- map("n", "<leader>" .. i, ":BufferLineGoToBuffer " .. i .. "<CR>", opts)
   map("n", "<leader>" .. i, ":lua require(\"bufferline\").go_to_buffer(" .. i .. ", true)<CR>")
 end
 
@@ -139,11 +138,6 @@ if enabled(group, "toggleterm") then
   map("n", "<leader>gg", "<CMD>lua term.lazygit_toggle()<CR>", { desc = "open lazygit" })
   map("n", "<leader>gd", "<CMD>lua term.gdu_toggle()<CR>", { desc = "open gdu" })
   map("n", "<leader>bt", "<CMD>lua term.bashtop_toggle()<CR>", { desc = "open bashtop" })
-end
-
--- Hop
-if enabled(group, "hop") then
-  map("n", "<leader>j", "<CMD>HopWord<CR>")
 end
 
 -- Gitsigns

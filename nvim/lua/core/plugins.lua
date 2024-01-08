@@ -9,13 +9,24 @@ require("lazy").setup({
     cmd = { "G", "Git" },
   },
   {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+    event = { "InsertEnter", "LspAttach" },
+  },
+
+  {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
     config = function()
       require("copilot").setup({
         suggestion = {
-          auto_trigger = true,
+          enabled = false,
+        },
+        panel = {
+          enabled = false,
         }
       })
     end,
@@ -94,7 +105,9 @@ require("lazy").setup({
     cond = enabled(group, "indent_blankline"),
     event = "VimEnter",
     config = function()
-      require("ibl").setup()
+      require("ibl").setup({
+        scope = { enabled = false }
+      })
     end,
   },
   {
