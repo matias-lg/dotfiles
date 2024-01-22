@@ -73,13 +73,18 @@ require("lazy").setup({
     end,
   },
   {
-    "akinsho/bufferline.nvim",
-    cond = enabled(group, "bufferline"),
+    "stevearc/oil.nvim",
     lazy = false,
     config = function()
-      require("plugin-configs.bufferline")
+      require("oil").setup({
+        view_options = {
+          show_hidden = true
+        }
+      })
     end,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+
   {
     "numToStr/Comment.nvim",
     cond = enabled(group, "comment"),
@@ -148,18 +153,7 @@ require("lazy").setup({
       require("plugin-configs.neoscroll")
     end,
   },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    cond = enabled(group, "neotree"),
-    event = "VeryLazy",
-    config = function()
-      require("plugin-configs.neo-tree")
-    end,
-    branch = "v3.x",
-    dependencies = { { "nvim-tree/nvim-web-devicons" },
-      { "MunifTanjim/nui.nvim" }
-    },
-  },
+
   {
     "Shatur/neovim-session-manager",
     cond = enabled(group, "session_manager"),

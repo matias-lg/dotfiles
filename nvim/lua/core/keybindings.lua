@@ -27,11 +27,6 @@ if enabled(group, "dap") then
   map("n", "<leader>dq", "<CMD>lua dap.disconnect({ terminateDebuggee = true })<CR>")
 end
 
--- Bufferline
-for i = 1, 9 do
-  map("n", "<leader>" .. i, ":lua require(\"bufferline\").go_to_buffer(" .. i .. ", true)<CR>")
-end
-
 -- Trouble
 if enabled(group, "trouble") then
   map("n", "<leader>tr", "<CMD>TroubleToggle lsp_references<CR>")
@@ -45,10 +40,15 @@ if enabled(group, "zen") then
 end
 
 -- NeoTree
-if enabled(group, "neotree") then
-  map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
-  map("n", "<leader>nf", "<CMD>Neotree reveal float<CR>")
-end
+-- if enabled(group, "neotree") then
+--   map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
+--   map("n", "<leader>nf", "<CMD>Neotree reveal float<CR>")
+-- end
+
+-- Oil
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+map("n", "+", "<CMD>Oil" .. vim.fn.getcwd() .. "<CR>", { desc = "Open cwd" })
+
 
 -- Aerial
 if enabled(group, "aerial") then
