@@ -25,3 +25,5 @@ if not require("core.utils.utils").enabled(group, "autosave") then
 	})
 end
 lsp.setup()
+
+require('lspconfig').pyright.setup({})

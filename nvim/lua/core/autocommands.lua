@@ -20,17 +20,6 @@ if enabled(group, "inlay_hints") then
   })
 end
 
--- Removes any trailing whitespace when saving a file
-if enabled(group, "trailing_whitespace") then
-  cmd({ "BufWritePre" }, {
-    desc = "remove trailing whitespace on save",
-    group = augroup("remove trailing whitespace", { clear = true }),
-    pattern = { "*" },
-    command = [[%s/\s\+$//e]],
-  })
-end
-
-
 -- gives you a notification upon saving a session
 if enabled(group, "session_saved_notification") then
   cmd({ "User" }, {
