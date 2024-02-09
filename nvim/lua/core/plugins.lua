@@ -8,13 +8,6 @@ require("lazy").setup({
     "tpope/vim-fugitive",
     cmd = { "G", "Git" },
   },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-    event = { "InsertEnter", "LspAttach" },
-  },
 
   {
     "zbirenbaum/copilot.lua",
@@ -22,15 +15,24 @@ require("lazy").setup({
     event = "InsertEnter",
     config = function()
       require("copilot").setup({
-        suggestion = {
-          enabled = false,
-        },
         panel = {
           enabled = false,
+        },
+        suggestion = {
+          auto_trigger = true,
+          keymap = {
+            accept = "<M-a>",
+            accept_line = "<M-l>",
+            accept_word = "<M-k>",
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<M-c>",
+          }
         }
       })
     end,
   },
+
   {
     "lervag/vimtex",
     config = function()

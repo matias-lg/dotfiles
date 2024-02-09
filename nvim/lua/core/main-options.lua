@@ -17,7 +17,7 @@ vim_opts({
 		updatetime = 100,
 		linebreak = true,
 		showbreak = "=>>",
-		textwidth = 100,
+		-- textwidth = 100,
 		breakindent = true,
 		breakindentopt = "shift:2,min:40,sbr",
 		smartcase = true,

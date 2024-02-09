@@ -1,4 +1,5 @@
 local lsp = require("lsp-zero")
+local lspconfig = require("lspconfig")
 lsp.preset("minimal")
 
 lsp.set_sign_icons({
@@ -26,4 +27,6 @@ if not require("core.utils.utils").enabled(group, "autosave") then
 end
 lsp.setup()
 
-require('lspconfig').pyright.setup({})
+lspconfig.pyright.setup({})
+lspconfig.htmx.setup{}
+
