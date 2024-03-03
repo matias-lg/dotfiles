@@ -19,7 +19,6 @@ M.ensure_installed = {
   },
   dap = {
     "python",
-    "delve",
   },
 }
 

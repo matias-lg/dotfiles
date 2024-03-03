@@ -153,7 +153,15 @@ source ~/.secrets
 
 eval $(ssh-agent) > /dev/null
 export TERM=xterm-256color
-# Run tmux if it exists, and we're not already in a tmux session
+
+# # Run tmux if it exists, and we're not already in a tmux session
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
     exec tmux
 fi
+
+# bun completions
+[ -s "/home/mati/.bun/_bun" ] && source "/home/mati/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
