@@ -262,10 +262,15 @@ require("lazy").setup({
       { "JoosepAlviste/nvim-ts-context-commentstring" },
     },
   },
+
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, lazy = false },
+
   {
     "navarasu/onedark.nvim",
     cond = enabled(group, "onedark"),
   },
+
+
   { "nvim-lua/plenary.nvim" },
   {
     "ahmedkhalf/project.nvim",
