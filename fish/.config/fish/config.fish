@@ -25,8 +25,5 @@ nvm use lts > /dev/null 2>&1
 # vim keymaps
 fish_vi_key_bindings
 
-# GOLANG
-set -x GOROOT /usr/local/go
-set -x GOPATH $HOME/go/
-fish_add_path $GOROOT/bin
-fish_add_path $GOPATH/bin
+# gruvbox colorscheme
+theme_gruvbox dark
