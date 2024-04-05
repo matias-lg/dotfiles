@@ -5,7 +5,6 @@ local M = {}
 -- add any null-ls sources you want here
 M.setup_sources = function(b)
   return {
-    b.formatting.autopep8,
     b.formatting.prettier,
     b.code_actions.gitsigns,
   }
@@ -47,7 +46,7 @@ M.options = {
 M.autocommands = {
   inlay_hints = true,
   alpha_folding = true,
-  treesitter_folds = true,
+  treesitter_folds = false,
   trailing_whitespace = true,
   remember_file_state = true,
   session_saved_notification = true,
@@ -78,7 +77,6 @@ M.enable_plugins = {
   session_manager = true,
   noice = false,
   null_ls = true,
-  autopairs = true,
   cmp = true,
   colorizer = true,
   dap = true,

@@ -225,6 +225,7 @@ require("lazy").setup({
       },
       {
         "rcarriga/nvim-dap-ui",
+        dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
         config = function()
           require("dapui").setup()
         end,
@@ -258,12 +259,11 @@ require("lazy").setup({
     dependencies = {
       { "nvim-treesitter/nvim-treesitter-textobjects" },
       { "windwp/nvim-ts-autotag" },
-      { "HiPhish/rainbow-delimiters.nvim" },
       { "JoosepAlviste/nvim-ts-context-commentstring" },
     },
   },
 
-  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, lazy = false },
+  { "ellisonleao/gruvbox.nvim", priority = 1000,  config = true, lazy = false },
 
   {
     "navarasu/onedark.nvim",
@@ -315,14 +315,7 @@ require("lazy").setup({
     cond = enabled(group, "trouble"),
     cmd = { "TroubleToggle", "Trouble" },
   },
-  {
-    "folke/twilight.nvim",
-    cond = enabled(group, "twilight"),
-    cmd = { "Twilight", "TwilightEnable", "TwilightDisable" },
-    config = function()
-      require("plugin-configs.twilight")
-    end,
-  },
+
   {
     "folke/which-key.nvim",
     cond = enabled(group, "whichkey"),
