@@ -5,31 +5,6 @@ local exist, user_config = pcall(require, "user.user_config")
 local group = exist and type(user_config) == "table" and user_config.autocommands or {}
 local enabled = require("core.utils.utils").enabled
 
--- enables suport for inlay hints with virtual text
-if enabled(group, "inlay_hints") then
-  cmd("LspAttach", {
-    group = augroup("LspAttach_inlayhints", { clear = true }),
-    callback = function(args)
-      if not (args.data and args.data.client_id) then
-        return
-      end
-      local bufnr = args.buf
-      local client = vim.lsp.get_client_by_id(args.data.client_id)
-      require("lsp-inlayhints").on_attach(client, bufnr)
-    end,
-  })
-end
-
--- gives you a notification upon saving a session
-if enabled(group, "session_saved_notification") then
-  cmd({ "User" }, {
-    desc = "notify session saved",
-    group = augroup("session save", { clear = true }),
-    pattern = "SessionSavePost",
-    command = "lua vim.notify('Session Saved', 'info')",
-  })
-end
-
 -- Fixes issues that arise when using the autosave plugin and autoformatting at the same time
 if enabled(group, "format_on_autosave") then
   cmd("User", {

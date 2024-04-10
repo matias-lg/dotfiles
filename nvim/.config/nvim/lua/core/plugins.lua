@@ -117,14 +117,7 @@ require("lazy").setup({
       })
     end,
   },
-  {
-    "lvimuser/lsp-inlayhints.nvim",
-    cond = enabled(group, "inlay_hints"),
-    event = "VeryLazy",
-    config = function()
-      require("lsp-inlayhints").setup()
-    end,
-  },
+
   {
     "VonHeikemen/lsp-zero.nvim",
     cond = enabled(group, "lsp_zero"),
