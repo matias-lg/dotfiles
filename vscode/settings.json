@@ -1,0 +1,223 @@
+{
+  "editor.fontFamily": "'jetbrains mono','fira code','FiraCode Nerd Font','iosevka','ubuntu mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "relative",
+  "terminal.integrated.fontSize": 12,
+  "editor.minimap.enabled": false,
+  "editor.semanticHighlighting.enabled": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "explorer.confirmDelete": false,
+  "editor.fontSize": 13,
+  "vim.useSystemClipboard": true,
+  "vim.leader": " ",
+  "settingsSync.keybindingsPerPlatform": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "debug.console.fontFamily": "editor",
+  "editor.codeLensFontFamily": "editor",
+  "emmet.showAbbreviationSuggestions": false,
+  "editor.bracketPairColorization.enabled": false,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "1"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex1"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "2"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex2"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "3"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex3"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "4"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex4"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "5"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex5"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "6"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex6"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "7"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex7"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "8"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex8"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "9"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex9"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "0"
+      ],
+      "commands": [
+        "workbench.action.openPreviousRecentlyUsedEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "t"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "a",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.toggleActivityBarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e",
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+      ]
+    },
+    {
+      "before": [
+        "<S-l>",
+      ],
+      "commands": [
+        "workbench.action.nextEditor",
+      ]
+    },
+    {
+      "before": [
+        "<S-h>",
+      ],
+      "commands": [
+        "workbench.action.previousEditor",
+      ]
+    },
+  ],
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "info",
+    "hint"
+  ],
+  "errorLens.messageBackgroundMode": "message",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "color-highlight.markRuler": false,
+  "editor.snippetSuggestions": "bottom",
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "git.suggestSmartCommit": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false
+  },
+  "git.confirmSync": false,
+  "gruvboxMaterial.darkPalette": "original",
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
+  "settingsSync.ignoredSettings": [
+    "editor.fontSize"
+  ],
+  "editor.tabSize": 2,
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // tell the ESLint plugin to run on save
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": "explicit"
+  // },
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "eslint.run": "onSave",
+  "window.menuBarVisibility": "compact",
+  "window.dialogStyle": "custom",
+  "editor.wordWrap": "on",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gruvboxMaterial.darkWorkbench": "flat",
+  "[go]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+       "source.organizeImports": "never"
+    }
+  },
+  "go.formatTool": "gofmt"
+}
