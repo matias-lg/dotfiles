@@ -1,0 +1,6 @@
+color highlight
+error lens
+VIM
+Go
+Gruvbox Material
+
