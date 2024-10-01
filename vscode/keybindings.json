@@ -1,25 +1,52 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+
+  // TERMINAL: enabled when terminal is open and we are focusing it
   {
-    "key": "ctrl+shift+t",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
+    "key": "shift+t",
+    "command": "workbench.action.togglePanel",
+    "when": "terminal.active && terminalFocus"
   },
   {
-    "key": "ctrl+`",
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
+    "key": "shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminal.active && terminalFocus"
+  },
+
+  {
+    "key": "shift+o",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminal.active && terminalFocus"
   },
   {
-    "key": "ctrl+d",
-    "command": "editor.action.revealDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    "key": "shift+p",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminal.active && terminalFocus"
+  },
+  // FILE TREE
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "f12",
-    "command": "-editor.action.revealDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
   },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+
+
   // Navigate with hjkl when not in insert mode
   {
     "key": "ctrl+l",
@@ -46,6 +73,7 @@
     "command": "editor.action.showHover",
     "when": "vim.mode != 'Insert'"
   },
+  // Autocomplete navigation with TAB
   {
     "key": "tab",
     "command": "selectNextQuickFix",

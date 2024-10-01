@@ -1,4 +1,10 @@
 {
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+
   "editor.fontFamily": "'jetbrains mono','fira code','FiraCode Nerd Font','iosevka','ubuntu mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.cursorBlinking": "solid",
@@ -20,7 +26,7 @@
   "editor.codeLensFontFamily": "editor",
   "emmet.showAbbreviationSuggestions": false,
   "editor.bracketPairColorization.enabled": false,
-  "vim.normalModeKeyBindings": [
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
         "<leader>",
@@ -150,22 +156,11 @@
         "workbench.action.toggleSidebarVisibility",
       ]
     },
-    {
-      "before": [
-        "<S-l>",
-      ],
-      "commands": [
-        "workbench.action.nextEditor",
-      ]
-    },
-    {
-      "before": [
-        "<S-h>",
-      ],
-      "commands": [
-        "workbench.action.previousEditor",
-      ]
-    },
+    // Navigation
+    { "before": ["<S-l>"], "commands": ["workbench.action.nextEditor",]},
+    { "before": ["<S-h>",],"commands": ["workbench.action.previousEditor",]},
+    // Terminal
+    { "before": ["<S-t>",],"commands": ["workbench.action.togglePanel",]},
   ],
   "errorLens.enabledDiagnosticLevels": [
     "error",
@@ -174,9 +169,6 @@
     "hint"
   ],
   "errorLens.messageBackgroundMode": "message",
-  "gitlens.currentLine.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.hovers.enabled": false,
   "color-highlight.markRuler": false,
   "editor.snippetSuggestions": "bottom",
   "explorer.confirmDragAndDrop": false,
@@ -191,7 +183,6 @@
   },
   "git.confirmSync": false,
   "gruvboxMaterial.darkPalette": "original",
-  "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
   "settingsSync.ignoredSettings": [
     "editor.fontSize"
@@ -217,7 +208,7 @@
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
        "source.organizeImports": "never"
-    }
+    },
   },
-  "go.formatTool": "gofmt"
+  "go.formatTool": "gofmt",
 }
