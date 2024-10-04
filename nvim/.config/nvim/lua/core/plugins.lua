@@ -241,8 +241,9 @@ require("lazy").setup({
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    cond = enabled(group, "treesitter"),
-    event = { "BufReadPost", "BufNewFile" },
+    --cond = enabled(group, "treesitter"),
+    --event = { "BufReadPost", "BufNewFile" },
+    cmd = "VimEnter",
     run = function()
       require("nvim-treesitter.install").update({ with_sync = true })
     end,
@@ -309,14 +310,6 @@ require("lazy").setup({
     cmd = { "TroubleToggle", "Trouble" },
   },
 
-  {
-    "folke/which-key.nvim",
-    cond = enabled(group, "whichkey"),
-    event = "VeryLazy",
-    config = function()
-      require("which-key").setup()
-    end,
-  },
   {
     "folke/zen-mode.nvim",
     cond = enabled(group, "zen"),
