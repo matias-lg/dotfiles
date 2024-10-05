@@ -241,8 +241,8 @@ require("lazy").setup({
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    --cond = enabled(group, "treesitter"),
-    --event = { "BufReadPost", "BufNewFile" },
+    cond = enabled(group, "treesitter"),
+    event = { "BufReadPost", "BufNewFile" },
     cmd = "VimEnter",
     run = function()
       require("nvim-treesitter.install").update({ with_sync = true })
